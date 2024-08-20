@@ -17,10 +17,11 @@ public class ListaDeEnemigos : MonoBehaviour
     {
         if (!enemigosActivados && other.CompareTag("Player"))
         {
+            this.GetComponent<BoxCollider>().enabled = false;
             ActivarEnemigos();
             enemigosActivados = true;
         }
-        this.GetComponent<BoxCollider>().enabled = false;
+        
     }
 
     public void ActivarEnemigos()
